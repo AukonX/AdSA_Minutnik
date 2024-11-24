@@ -43,15 +43,22 @@ class MainActivity : AppCompatActivity() {
 
 
         startButton.setOnClickListener {
-            var trans = supportFragmentManager.beginTransaction()
-            trans.remove(SetterFragment())
-            trans.replace(R.id.MainFragmentContainer ,CountingFragment())
-            trans.commit()
+            Timer.CalculateTotalMiliSecs()
+            if(Timer.totalMiliSecs == "0".toLong())
+            {
 
-            startButton.isEnabled = false
-            pauseButton.isEnabled = true
-            stopButton.isEnabled = true
+            }
+            else
+            {
+                var trans = supportFragmentManager.beginTransaction()
+                trans.remove(SetterFragment())
+                trans.replace(R.id.MainFragmentContainer ,CountingFragment())
+                trans.commit()
 
+                startButton.isEnabled = false
+                pauseButton.isEnabled = true
+                stopButton.isEnabled = true
+            }
         }
 
         pauseButton.setOnClickListener {

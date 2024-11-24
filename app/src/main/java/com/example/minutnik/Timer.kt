@@ -15,6 +15,7 @@ object Timer {
 
     fun CalculateTotalMiliSecs()
     {
+        totalMiliSecs = 0
         totalMiliSecs += minutesTens * 600
         totalMiliSecs += minutes * 60
         totalMiliSecs += secondsTens * 10
