@@ -24,13 +24,14 @@ object Timer {
 
     }
 
-    fun Start(button: Button) {
+    fun Start(button: Button, buttonStop: Button?) {
         clock = object : CountDownTimer(totalMiliSecs, 1000) {
             override fun onTick(p0: Long) {
                 button.performClick()
             }
 
             override fun onFinish() {
+                buttonStop?.performClick()
             }
         }.start()
     }

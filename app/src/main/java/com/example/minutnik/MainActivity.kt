@@ -15,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pauseButton: Button
     private lateinit var stopButton: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
