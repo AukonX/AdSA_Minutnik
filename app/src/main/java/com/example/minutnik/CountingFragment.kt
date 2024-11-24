@@ -94,7 +94,7 @@ class CountingFragment : Fragment() {
         }
 
         Timer.CalculateTotalMiliSecs()
-        Timer.Start(view)
-
+        Timer.Start(view.findViewById<Button>(R.id.ButtonCounterSecondsMinus))
+        
     }
 }

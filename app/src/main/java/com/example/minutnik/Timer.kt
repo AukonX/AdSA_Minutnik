@@ -3,6 +3,7 @@ package com.example.minutnik
 import android.os.CountDownTimer
 import android.view.View
 import android.widget.Button
+import androidx.fragment.app.Fragment
 
 object Timer {
     var minutesTens : Int = 0
@@ -23,10 +24,10 @@ object Timer {
 
     }
 
-    fun Start(view: View) {
+    fun Start(button: Button) {
         clock = object : CountDownTimer(totalMiliSecs, 1000) {
             override fun onTick(p0: Long) {
-                view.findViewById<Button>(R.id.ButtonCounterSecondsMinus).performClick()
+                button.performClick()
             }
 
             override fun onFinish() {
